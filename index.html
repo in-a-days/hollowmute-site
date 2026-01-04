@@ -46,6 +46,13 @@
 
       /* Optional: prevents weird select/drag behavior */
       user-select: none;
+
+      @media (min-aspect-ratio: 21/9) {
+        header img {
+          height: clamp(280px, 40vh, 640px);
+        }
+      }
+
     }
 
 
