@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Hollow Mute</title>
@@ -10,7 +11,7 @@
     :root {
       --bg: #0f0f0f;
       --fg: #ffffff;
-      --muted: rgba(255,255,255,0.75);
+      --muted: rgba(255, 255, 255, 0.75);
       --accent: #ffffff;
     }
 
@@ -31,11 +32,22 @@
     }
 
     header img {
-      width: 100%;
-      max-height: 800px;
-      object-fit: cover;
       display: block;
+      width: 100%;
+
+      /* Normalize header height across devices */
+      height: clamp(260px, 35vh, 560px);
+
+      /* Fill the box while preserving aspect ratio (cropping as needed) */
+      object-fit: cover;
+
+      /* Sensible default focal point (adjust later if needed) */
+      object-position: center;
+
+      /* Optional: prevents weird select/drag behavior */
+      user-select: none;
     }
+
 
     main {
       padding: 2.5rem 1.5rem;
@@ -69,6 +81,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -96,4 +109,5 @@
   </footer>
 
 </body>
+
 </html>
