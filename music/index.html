@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#0f0f0f">
   <meta name="description" content="Music and releases from Hollow Mute.">
   <title>Music | Hollow Mute</title>
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
   <style>
     :root {
       color-scheme: dark;
@@ -116,6 +119,7 @@
       place-items: center;
       background: linear-gradient(135deg, #272727, #101010);
       border-bottom: 1px solid var(--line);
+      text-decoration: none;
     }
 
     .art img {
@@ -123,6 +127,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .art:hover,
+    .art:focus-visible {
+      opacity: .85;
     }
 
     .art-placeholder {
@@ -218,9 +227,9 @@
     <p class="intro">Releases from Hollow Mute. Pick a track and choose your favorite streaming platform.</p>
     <section class="release-grid" aria-label="Releases">
       <article class="release">
-        <div class="art">
+        <a class="art" href="https://li.sten.to/o0e4nst3" target="_blank" rel="noopener noreferrer" aria-label="Listen to Mosh Rattle">
           <img src="/assets/images/moshrattle.png" alt="Hollow Mute - Mosh Rattle">
-        </div>
+        </a>
         <div class="release-body">
           <div class="release-type">Single · 2026</div>
           <h2>Mosh Rattle</h2>
@@ -232,12 +241,12 @@
       </article>
       <!-- Template for the next release. Replace title, artwork and URL when published. -->
       <article class="release">
-        <div class="art">
-          <img src="/assets/images/unwind.png" alt="Hollow Mute - Mosh Rattle">
-        </div>
+        <a class="art" href="https://li.sten.to/g5c23m47" target="_blank" rel="noopener noreferrer" aria-label="Listen to Unwind">
+          <img src="/assets/images/unwind.jpg" alt="Hollow Mute - Unwind">
+        </a>
         <div class="release-body">
           <div class="release-type">Single - 2026</div>
-          <h2>Uwind</h2>
+          <h2>Unwind</h2>
           <p>Listen on your preferred streaming service.</p>
           <a class="button" href="https://li.sten.to/g5c23m47" target="_blank" rel="noopener noreferrer">Listen now
             ↗</a>
