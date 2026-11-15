@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,28 +10,160 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
-    :root { color-scheme:dark; --bg:#0f0f0f; --fg:#f6f6f6; --muted:#aaa; --line:#373737; --accent:#e44b42; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; text-align:center; }
-    .hero img { display:block; width:100%; height:auto; user-select:none; }
-    main { max-width:900px; margin:0 auto; padding:clamp(2.5rem,6vw,4rem) 1.25rem 4rem; }
-    .tagline { margin:0 0 .35rem; font-size:clamp(1.3rem,4vw,2rem); font-weight:900; letter-spacing:.06em; }
-    .genre { margin:0 0 2.5rem; color:var(--muted); font-size:.85rem; letter-spacing:.16em; text-transform:uppercase; }
-    .nav-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
-    .nav-link { display:flex; min-height:84px; align-items:center; justify-content:center; padding:1.25rem; border:1px solid var(--line); background:#1a1a1a; color:var(--fg); text-decoration:none; font-size:1.1rem; font-weight:900; letter-spacing:.12em; transition:background .2s,border-color .2s,transform .2s; }
-    .nav-link.active { background:var(--fg); color:#111; }
-    .nav-link.active:hover,.nav-link.active:focus-visible { background:var(--accent); color:#fff; border-color:var(--accent); transform:translateY(-2px); }
-    .nav-link.soon { cursor:default; opacity:.55; flex-direction:column; gap:.4rem; }
-    .nav-link.soon span { font-size:.66rem; font-weight:600; letter-spacing:.13em; color:var(--muted); }
-    .nav-link.wide { grid-column:1/-1; }
-    footer { border-top:1px solid var(--line); padding:2rem 1rem; color:var(--muted); }
-    .social-links { display:flex; align-items:center; justify-content:center; gap:1.5rem; margin-bottom:1.25rem; }
-    .social-links a { display:flex; width:42px; height:42px; align-items:center; justify-content:center; border-radius:8px; background:#777; color:#fff; font-size:1.4rem; text-decoration:none; transition:background .2s,transform .2s; }
-    .social-links a:hover,.social-links a:focus-visible { background:var(--accent); transform:translateY(-3px); }
-    .copyright { font-size:.85rem; }
-    @media(max-width:480px) { .nav-grid { gap:.75rem; } .nav-link { min-height:76px; padding:1rem .5rem; font-size:.95rem; } }
+    :root {
+      color-scheme: dark;
+      --bg: #0f0f0f;
+      --fg: #f6f6f6;
+      --muted: #aaa;
+      --line: #373737;
+      --accent: #e44b42;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      text-align: center;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 4rem) 1.25rem 4rem;
+    }
+
+    .tagline {
+      margin: 0 0 .35rem;
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+
+    .genre {
+      margin: 0 0 2.5rem;
+      color: var(--muted);
+      font-size: .85rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .nav-link {
+      display: flex;
+      min-height: 84px;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      background: #1a1a1a;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .nav-link.active {
+      background: var(--fg);
+      color: #111;
+    }
+
+    .nav-link.active:hover,
+    .nav-link.active:focus-visible {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .nav-link.soon {
+      cursor: default;
+      opacity: .55;
+      flex-direction: column;
+      gap: .4rem;
+    }
+
+    .nav-link.soon span {
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .13em;
+      color: var(--muted);
+    }
+
+    .nav-link.wide {
+      grid-column: 1/-1;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 1rem;
+      color: var(--muted);
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .social-links a {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: #777;
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus-visible {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      font-size: .85rem;
+    }
+
+    @media(max-width:480px) {
+      .nav-grid {
+        gap: .75rem;
+      }
+
+      .nav-link {
+        min-height: 76px;
+        padding: 1rem .5rem;
+        font-size: .95rem;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header class="hero">
     <img src="/assets/images/header.jpg" alt="Hollow Mute">
@@ -38,21 +171,30 @@
   <main>
     <h1 class="tagline">LOUD. FAST. VEGAS.</h1>
     <p class="genre">Punk / Metal / Spake</p>
+
     <nav class="nav-grid" aria-label="Main navigation">
       <a class="nav-link active" href="/music/">MUSIC</a>
-      <div class="nav-link soon" aria-label="Merch coming soon">MERCH <span>COMING SOON</span></div>
-      <div class="nav-link soon wide" aria-label="Live shows coming soon">LIVE SHOWS <span>COMING SOON</span></div>
+
+      <div class="nav-link soon" aria-label="Merch coming soon">
+        MERCH <span>COMING SOON</span>
+      </div>
+
+      <a class="nav-link active wide" href="/shows/">LIVE SHOWS</a>
     </nav>
   </main>
   <footer>
     <div class="social-links">
-      <a href="https://instagram.com/hollowmute" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://instagram.com/hollowmute" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+          class="fa-brands fa-instagram" aria-hidden="true"></i></a>
       <!-- Verify this YouTube handle before publishing. -->
-      <a href="https://www.youtube.com/@hollowmute" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-      <a href="mailto:hollowmute@gmail.com" aria-label="Email Hollow Mute"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.youtube.com/@hollowmute" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+          class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+      <a href="mailto:hollowmute@gmail.com" aria-label="Email Hollow Mute"><i class="fa-solid fa-envelope"
+          aria-hidden="true"></i></a>
     </div>
     <div class="copyright">© <span id="year">2026</span> Hollow Mute</div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>

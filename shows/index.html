@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="description" content="Upcoming live shows from Hollow Mute in Las Vegas.">
+  <title>Live Shows | Hollow Mute</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root { color-scheme: dark; --bg:#0f0f0f; --panel:#1a1a1a; --fg:#f6f6f6; --muted:#aaa; --line:#373737; --accent:#e44b42; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:inherit; }
+    .site-header { border-bottom:1px solid var(--line); }
+    .site-header-inner { max-width:1100px; margin:auto; padding:1.25rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { font-weight:900; letter-spacing:.13em; text-decoration:none; font-size:clamp(1.1rem,3vw,1.55rem); }
+    .back { text-decoration:none; font-size:.9rem; color:var(--muted); }
+    .back:hover,.back:focus-visible { color:var(--fg); }
+    main { max-width:1100px; margin:auto; padding:clamp(2.5rem,7vw,5rem) 1.5rem 5rem; }
+    .eyebrow { color:var(--accent); letter-spacing:.24em; text-transform:uppercase; font-size:.75rem; font-weight:800; }
+    h1 { font-size:clamp(3.5rem,11vw,7.5rem); line-height:.95; margin:.5rem 0 1rem; letter-spacing:-.055em; }
+    .intro { color:var(--muted); max-width:42rem; line-height:1.6; margin-bottom:3rem; }
+    .show { display:grid; grid-template-columns:minmax(0, .85fr) minmax(0,1fr); border:1px solid var(--line); background:var(--panel); overflow:hidden; }
+    .show-flyer { background:#252525; }
+    .show-flyer img { display:block; width:100%; height:auto; }
+    .show-body { padding:clamp(1.5rem,4vw,3rem); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+    .show-type { color:var(--accent); font-size:.75rem; letter-spacing:.15em; font-weight:800; text-transform:uppercase; }
+    h2 { font-size:clamp(1.8rem,4vw,3rem); line-height:1.1; margin:.7rem 0 1.5rem; }
+    .detail-label { color:var(--muted); font-size:.75rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; margin:1.25rem 0 .35rem; }
+    .detail { margin:0; line-height:1.6; font-size:1.05rem; }
+    .lineup { font-weight:700; }
+    .note { color:var(--muted); font-size:.95rem; line-height:1.6; margin-top:1.5rem; }
+    .more { margin:2.5rem 0 0; text-align:center; color:var(--muted); }
+    footer { padding:1.5rem; text-align:center; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+    .social-links { display:flex; justify-content:center; align-items:center; gap:1.5rem; margin-bottom:1.25rem; }
+    .social-links a { display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:8px; background:#777; color:#fff; font-size:1.4rem; text-decoration:none; transition:background .2s ease,transform .2s ease; }
+    .social-links a:hover,.social-links a:focus-visible { background:var(--accent); transform:translateY(-3px); }
+    @media (max-width:700px) { .show { grid-template-columns:1fr; } .show-flyer { max-width:100%; } }
+    @media (max-width:480px) { .site-header-inner { padding:1rem; } main { padding-left:1rem; padding-right:1rem; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="/">HOLLOW MUTE</a>
+      <a class="back" href="/">← Back to home</a>
+    </div>
+  </header>
+  <main>
+    <div class="eyebrow">Catch us live</div>
+    <h1>LIVE SHOWS</h1>
+    <p class="intro">Loud music. Small rooms. No compromises.</p>
+    <section aria-label="Upcoming shows">
+      <article class="show">
+        <div class="show-flyer">
+          <img src="/assets/images/reddwarf11427.jpg" alt="Last One Down, Hollow Mute and Go Bold at The Red Dwarf on January 14, 2027. Free show at 9 PM." loading="eager">
+        </div>
+        <div class="show-body">
+          <div class="show-type">Upcoming show · Free admission</div>
+          <h2>Last One Down comes to Vegas!</h2>
+          <div class="detail-label">When</div>
+          <p class="detail"><time datetime="2027-01-14T21:00">Thursday, January 14, 2027 · 9 PM</time></p>
+          <div class="detail-label">Where</div>
+          <p class="detail">The Red Dwarf<br>1305 Vegas Valley Dr<br>Las Vegas, NV</p>
+          <div class="detail-label">Lineup</div>
+          <p class="detail lineup">Last One Down<br>Hollow Mute<br>Go Bold</p>
+          <p class="note">No ticket link needed — the flyer lists this show as free.</p>
+        </div>
+      </article>
+    </section>
+    <p class="more">More noise coming soon. Follow us for future show announcements.</p>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/hollowmute" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.youtube.com/@hollowmute" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+      <a href="mailto:hollowmute@gmail.com" aria-label="Email Hollow Mute"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+    </div>
+    <div>© <span id="year">2026</span> Hollow Mute</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
