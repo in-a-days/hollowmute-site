@@ -8,6 +8,7 @@
   <meta name="description" content="Music and releases from Hollow Mute.">
   <title>Music | Hollow Mute</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
   <style>
@@ -211,6 +212,38 @@
         padding-right: 1rem;
       }
     }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: #777;
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
   </style>
 </head>
 
@@ -227,7 +260,8 @@
     <p class="intro">Releases from Hollow Mute. Pick a track and choose your favorite streaming platform.</p>
     <section class="release-grid" aria-label="Releases">
       <article class="release">
-        <a class="art" href="https://li.sten.to/o0e4nst3" target="_blank" rel="noopener noreferrer" aria-label="Listen to Mosh Rattle">
+        <a class="art" href="https://li.sten.to/o0e4nst3" target="_blank" rel="noopener noreferrer"
+          aria-label="Listen to Mosh Rattle">
           <img src="/assets/images/moshrattle.png" alt="Hollow Mute - Mosh Rattle">
         </a>
         <div class="release-body">
@@ -241,7 +275,8 @@
       </article>
       <!-- Template for the next release. Replace title, artwork and URL when published. -->
       <article class="release">
-        <a class="art" href="https://li.sten.to/g5c23m47" target="_blank" rel="noopener noreferrer" aria-label="Listen to Unwind">
+        <a class="art" href="https://li.sten.to/g5c23m47" target="_blank" rel="noopener noreferrer"
+          aria-label="Listen to Unwind">
           <img src="/assets/images/unwind.jpg" alt="Hollow Mute - Unwind">
         </a>
         <div class="release-body">
@@ -254,8 +289,25 @@
       </article>
     </section>
   </main>
-  <footer>© <span id="year">2026</span> Hollow Mute · <a href="https://instagram.com/hollowmute" target="_blank"
-      rel="noopener noreferrer">Instagram</a></footer>
+  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/hollowmute" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.youtube.com/@hollowmute" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a href="mailto:hollowmute@gmail.com" aria-label="Email Hollow Mute">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="copyright">
+      © <span id="year">2026</span> Hollow Mute
+    </div>
+  </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
