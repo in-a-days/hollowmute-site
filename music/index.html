@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="description" content="Music and releases from Hollow Mute.">
+  <title>Music | Hollow Mute</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f0f0f;
+      --panel: #1a1a1a;
+      --fg: #f6f6f6;
+      --muted: #aaa;
+      --line: #373737;
+      --accent: #e44b42;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-decoration: none;
+      font-size: clamp(1.1rem, 3vw, 1.55rem);
+    }
+
+    .back {
+      text-decoration: none;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    .back:hover,
+    .back:focus-visible {
+      color: var(--fg);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: clamp(2.5rem, 7vw, 5rem) 1.5rem 5rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      font-size: .75rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 11vw, 7.5rem);
+      line-height: .95;
+      margin: .5rem 0 1rem;
+      letter-spacing: -.055em;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 42rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+
+    .release-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      gap: 1.5rem;
+    }
+
+    .release {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .art {
+      aspect-ratio: 1;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #272727, #101010);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .art img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .art-placeholder {
+      text-align: center;
+      padding: 2rem;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+    }
+
+    .release-body {
+      padding: 1.5rem;
+    }
+
+    .release-type {
+      color: var(--muted);
+      font-size: .75rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      margin: .4rem 0 .75rem;
+    }
+
+    .release-body p {
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0 0 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: .8rem 1.2rem;
+      background: var(--fg);
+      color: #111;
+      text-decoration: none;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: .82rem;
+      letter-spacing: .08em;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--accent);
+      color: white;
+    }
+
+    .coming-soon {
+      opacity: .75;
+    }
+
+    .coming-soon .button {
+      background: #343434;
+      color: #ddd;
+      cursor: default;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    @media(max-width:480px) {
+      .site-header-inner {
+        padding: 1rem;
+      }
+
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="/">HOLLOW MUTE</a>
+      <a class="back" href="/">← Back to home</a>
+    </div>
+  </header>
+  <main>
+    <div class="eyebrow">The noise lives here</div>
+    <h1>MUSIC</h1>
+    <p class="intro">Releases from Hollow Mute. Pick a track and choose your favorite streaming platform.</p>
+    <section class="release-grid" aria-label="Releases">
+      <article class="release">
+        <div class="art">
+          <img src="/assets/images/moshrattle.png" alt="Hollow Mute - Mosh Rattle">
+          <div class="art-placeholder">MOSH<br></div>
+        </div>
+        <div class="release-body">
+          <div class="release-type">Single · 2026</div>
+          <h2>Mosh Rattle</h2>
+          <p>Listen on your preferred streaming service.</p>
+          <!-- Existing website ListenTo URL; replace if this is not the Mosh Rattle-specific smart link. -->
+          <a class="button" href="https://li.sten.to/o0e4nst3" target="_blank" rel="noopener noreferrer">Listen now
+            ↗</a>
+        </div>
+      </article>
+      <!-- Template for the next release. Replace title, artwork and URL when published. -->
+      <article class="release coming-soon">
+        <div class="art">
+          <div class="art-placeholder">NEXT<br>RELEASE</div>
+        </div>
+        <div class="release-body">
+          <div class="release-type">More music</div>
+          <h2>Coming soon</h2>
+          <p>New music is on the way.</p>
+          <span class="button">Stay tuned</span>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>© <span id="year">2026</span> Hollow Mute · <a href="https://instagram.com/hollowmute" target="_blank"
+      rel="noopener noreferrer">Instagram</a></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
