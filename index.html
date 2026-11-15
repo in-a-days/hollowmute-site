@@ -34,25 +34,9 @@
     header img {
       display: block;
       width: 100%;
-
-      /* Normalize header height across devices */
-      height: clamp(260px, 35vh, 560px);
-
-      /* Fill the box while preserving aspect ratio (cropping as needed) */
-      object-fit: cover;
-
-      /* Sensible default focal point (adjust later if needed) */
-      object-position: center;
-
-      /* Optional: prevents weird select/drag behavior */
+      height: auto;
+      object-fit: contain;
       user-select: none;
-
-      @media (min-aspect-ratio: 21/9) {
-        header img {
-          height: clamp(280px, 40vh, 640px);
-        }
-      }
-
     }
 
 
